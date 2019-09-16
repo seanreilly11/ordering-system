@@ -6,18 +6,23 @@
 	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+	<header>
+		<img src="../images/thelarder-logo-text.png" alt="The Larder" class="header-logo">
+		<img src="../images/bell.png" alt="Call Waiter"  class="call-waiter-btn">
+	</header>
 	<div class="container">
+		<div class="content">
 		<div class="heading-section">
 			<h1 class="main-heading">YOUR ORDER</h1>
 			<h1 class="maori-heading">TO KAI</h1>
 		</div>
 
-		<div class="orderedFood">
-			<div class="orderedFood__food">
-				<div class="orderedFood__food__item">
-					<div class="orderedFood__food__item--details">
-						<div class="orderedFood__food__item--name">Shrooms</div>
-						<div class="orderedFood__food__item--quantity">
+		<div class="ordered-food">
+			<div class="ordered-food__food">
+				<div class="ordered-food__food__item">
+					<div class="ordered-food__food__item--details">
+						<div class="ordered-food__food__item--name">Shrooms</div>
+						<div class="ordered-food__food__item--quantity">
 							<select name="quantity" id="quantity">
 								<option value="1">1</option>
 								<option value="2">2</option>
@@ -29,15 +34,15 @@
 								<option value="8">8</option>
 							</select>
 						</div>
-						<div class="orderedFood__food__item--edit"><i class="fas fa-edit"></i></div>
+						<div class="ordered-food__food__item--edit"><i class="fas fa-edit"></i></div>
 					</div>
-					<div class="orderedFood__food__item--price">$12</div>
+					<div class="ordered-food__food__item--price">$12</div>
 				</div> <!-- orderedFood__food__item ENDS -->
 
-				<div class="orderedFood__food__item">
-					<div class="orderedFood__food__item--details">
-						<div class="orderedFood__food__item--name">Across to the pig ranch</div>
-						<div class="orderedFood__food__item--quantity">
+				<div class="ordered-food__food__item">
+					<div class="ordered-food__food__item--details">
+						<div class="ordered-food__food__item--name">Across to the pig ranch</div>
+						<div class="ordered-food__food__item--quantity">
 							<select name="quantity" id="quantity">
 								<option value="1">1</option>
 								<option value="2">2</option>
@@ -49,16 +54,16 @@
 								<option value="8">8</option>
 							</select>
 						</div>
-						<div class="orderedFood__food__item--edit"><i class="fas fa-edit"></i></div>
-						<div class="orderedFood__food__item--customized">Customized<i class="fas fa-arrow-circle-down"></i></div>
+						<div class="ordered-food__food__item--edit"><i class="fas fa-edit"></i></div>
+						<div class="ordered-food__food__item--customized">Customized<i class="fas fa-arrow-circle-down"></i></div>
 					</div>
-					<div class="orderedFood__food__item--price"></div>
+					<div class="ordered-food__food__item--price">$17</div>
 				</div> <!-- orderedFood__food__item ENDS -->
 
-				<div class="orderedFood__food__item">
-					<div class="orderedFood__food__item--details">
-						<div class="orderedFood__food__item--name">Sheep from the Middle East</div>
-						<div class="orderedFood__food__item--quantity">
+				<div class="ordered-food__food__item">
+					<div class="ordered-food__food__item--details">
+						<div class="ordered-food__food__item--name">Sheep from the Middle East</div>
+						<div class="ordered-food__food__item--quantity">
 							<select name="quantity" id="quantity">
 								<option value="1">1</option>
 								<option value="2">2</option>
@@ -70,15 +75,15 @@
 								<option value="8">8</option>
 							</select>
 						</div>
-						<div class="orderedFood__food__item--edit"><i class="fas fa-edit"></i></div>
+						<div class="ordered-food__food__item--edit"><i class="fas fa-edit"></i></div>
 					</div>
-					<div class="orderedFood__food__item--price"></div>
+					<div class="ordered-food__food__item--price">25</div>
 				</div> <!-- orderedFood__food__item ENDS -->
 
-				<div class="orderedFood__food__item">
-					<div class="orderedFood__food__item--details">
-						<div class="orderedFood__food__item--name">Pineapple Juice</div>
-						<div class="orderedFood__food__item--quantity">
+				<div class="ordered-food__food__item">
+					<div class="ordered-food__food__item--details">
+						<div class="ordered-food__food__item--name">Pineapple Juice</div>
+						<div class="ordered-food__food__item--quantity">
 							<select name="quantity" id="quantity">
 								<option value="1">1</option>
 								<option value="2">2</option>
@@ -91,14 +96,20 @@
 							</select>
 						</div>
 					</div>
-					<div class="orderedFood__food__item--price"></div>
+					<div class="ordered-food__food__item--price">$8</div>
 				</div>
+			</div> <!-- orderedFood__food ENDS -->
+			<div class="ordered-food__totalPrice">
+				<div class="ordered-food__totalPrice--text">Total Price</div>
+				<div class="ordered-food__totalPrice--price">$62</div>
 			</div>
-			<div class="orderedFood__totalPrice">
-				
+			<div class="ordered-food__buttons">
+				<button class="ordered-food__button editing-button white-button"><a href="menu.html">Edit Order</a></button>
+				<button class="ordered-food__button success-button green-button"><a href="payment.html">Go To Payment</a></button>
 			</div>
 		</div> <!-- ordered food ENDS -->
 	</div>
+	</div> <!-- container ENDS -->
 	<script src="https://kit.fontawesome.com/6c7bb61f4b.js"></script>
 </body>
 </html>
