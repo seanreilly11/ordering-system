@@ -22,7 +22,7 @@ body{
 }
 
 .container{
-	width: 80%;
+	width: 60%;
 	max-width: 1000px;
 	height: 100%;
 	margin: auto;
@@ -58,22 +58,39 @@ body{
 }
 
 .header-logo{
-	max-width: 200px;
-	border: 1px solid white;
+	max-width: 180px;
+	padding: 1rem;
+}
+
+.call-waiter-btn{
+	max-height: 30px;
+	margin: .5rem;
+}
+
+.fa-shopping-cart{
+	font-size: 30px;
+	color: $primary-font-col;
+	padding: .5rem;
 }
 
 .main-heading{
 	font-size: $main-heading-size;
 	color: $primary-font-col;
-	padding: .5rem;
+	padding: 0rem;
+	text-transform: uppercase;
 }
 
 .maori-heading{
 	font-size: $maori-heading-size;
 	color: $primary-font-col;
-	padding-botton: 5rem;
+	padding-bottom: .5rem;
+		text-transform: uppercase;
 }
 
+button{
+	outline: none;
+		cursor: pointer;
+}
 // home page
 .welcome-container{
 	width: 80%;
@@ -116,19 +133,18 @@ body{
 // food menu page-break-inside: 
 header{
 	width: 100%;
+	padding-top: 1rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid white;
 }
 
 .menu-nav{
-	width: 80%;
+	flex-basis: 80%;
+	max-width: 1170px;
 	margin-left: 0;
-	margin-top: 1rem;
 	display: flex;
 	justify-content: flex-end;
-	border: 1px solid white;
 }
 
 .menu-list{
@@ -136,31 +152,144 @@ header{
 	justify-content: space-evenly;
 	align-items: center;
 	list-style: none;
-	width: 90%;
-	border: 1px solid white;
+	width: 75%;
+	max-width: 800px;
 }
 
 .menu-list-item{
 	font-size: $nav-font-size;
+	text-transform: uppercase;
 	a{
 		color: $primary-font-col;
 		text-decoration: none;
 	}
 }
 
+.nav-icons{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-basis: 20%;
+}
+
+.vege-guide{
+	font-size: $small-text-size;
+	text-transform: uppercase;
+}
+
+.section__heading{
+	font-size: $other-heading-size;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 1rem 0 2rem;
+}
+
 .section__grid{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+	display: flex;
+	// grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	// grid-gap: 4rem;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .menu-section{
 	padding: 2rem 0 1rem;
 }
 
+.section__grid-items{
+	width: 45%;
+	margin-bottom: 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
 
+.section__grid-items__header{
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+}
 
+.section__grid-items__header--heading{
+	font-size: $food-item-heading-size;
+	text-transform: uppercase;
+	text-align: left;
+}
 
+.section__grid-items__header--diet{
+	font-size: $small-text-size;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
 
+.section__grid-items__header--price{
+	font-size: $food-item-heading-size;
+}
+
+.section__grid-items__body{
+	text-align: left;
+	padding: 1rem 0;
+}
+
+.section__grid-items__buttons{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// fixed customize pop up section
+.customize-container{
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: $bg-col;
+	width: 60%;
+	box-shadow: 0 4px 8px 4px rgba(255, 255, 255, 0.2);
+	z-index: 100;
+}
+
+.customize-inner{
+	width: 50%;
+	margin: auto;
+	padding: 1rem;	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.customize-inner__heading{
+	text-align: center;
+	font-size: $other-heading-size;
+	text-transform: uppercase;
+	padding: 1rem 0 2rem;
+}
+
+.customize-inner__body{
+	padding: 1rem 0;
+}
+
+.customize-text-area{
+	width: 100%;
+	padding: .5rem;
+	outline: none;
+	font-size: $small-text-size;
+}
+
+.confirm-custom-btn{
+	margin: .5rem;
+}
+
+.customize-close-popup{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 2rem;
+	font-size: $other-heading-size;
+	cursor: pointer;
+}
 
 
 
