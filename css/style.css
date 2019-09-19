@@ -27,23 +27,17 @@ body {
   width: 100%;
   text-align: center; }
 
-.white-button {
+.white-button, .green-button {
   font-size: 18px;
   padding: .75rem;
   background: #fff;
   border: none; }
-  .white-button a {
+  .white-button a, .green-button a {
     color: #000047;
     text-decoration: none; }
 
 .green-button {
-  font-size: 18px;
-  padding: .75rem;
-  background: #32CD32;
-  border: none; }
-  .green-button a {
-    color: #000047;
-    text-decoration: none; }
+  background: #32CD32; }
 
 .header-logo {
   max-width: 180px;
@@ -238,5 +232,84 @@ header {
   padding: 2rem;
   font-size: 30px;
   cursor: pointer; }
+
+.cart-div {
+  position: relative; }
+
+.added-to-cart {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #000047;
+  box-shadow: 0 4px 8px 4px rgba(255, 255, 255, 0.2);
+  width: 400%;
+  padding: 1rem;
+  text-transform: uppercase; }
+  .added-to-cart p {
+    padding: .5rem 0; }
+
+#added-to-cart-btn {
+  margin: auto; }
+
+.ordered-food {
+  width: 80%;
+  margin: 2rem auto 0;
+  font-size: 24px;
+  text-transform: uppercase; }
+
+.ordered-food__food {
+  width: 100%;
+  margin-bottom: 4rem; }
+
+.ordered-food__food__item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem; }
+
+.ordered-food__food__item--details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.ordered-food__food__item--customized {
+  font-size: 14px;
+  color: red; }
+  .ordered-food__food__item--customized i {
+    padding-left: .5rem; }
+
+.ordered-food__food__item--edit {
+  font-size: 14px; }
+
+.ordered-food__food__item--quantity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .ordered-food__food__item--quantity select {
+    font-size: 14px; }
+
+.ordered-food__food__item--name,
+.ordered-food__food__item--quantity,
+.ordered-food__food__item--edit,
+.ordered-food__food__item--customized {
+  margin-right: 1rem; }
+
+.ordered-food__totalPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem; }
+
+.ordered-food__buttons {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.food-des {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
