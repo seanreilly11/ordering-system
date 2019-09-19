@@ -46,8 +46,7 @@ body {
     text-decoration: none; }
 
 .header-logo {
-  max-width: 200px;
-  border: 1px solid white; }
+  max-width: 200px; }
 
 .main-heading {
   font-size: 50px;
@@ -95,24 +94,21 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  border: 1px solid white; }
+  align-items: center; }
 
 .menu-nav {
   width: 80%;
   margin-left: 0;
   margin-top: 1rem;
   display: flex;
-  justify-content: flex-end;
-  border: 1px solid white; }
+  justify-content: flex-end; }
 
 .menu-list {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   list-style: none;
-  width: 90%;
-  border: 1px solid white; }
+  width: 90%; }
 
 .menu-list-item {
   font-size: 20px; }
