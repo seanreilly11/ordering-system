@@ -9,7 +9,14 @@ $primary-font: "Roboto", sans-serif;
 
 $main-heading-size: 50px;
 $maori-heading-size: 30px;
-$other-heading-size: 28px;
+$other-heading-size: 30px;
+$food-item-heading-size: 24px;
 $button-font-size: 18px;
 $nav-font-size: 20px;
 $small-text-size: 14px;
+
+// mixins
+@mixin button-col-dec {
+  	color: $secondary-font-col;
+	text-decoration: none;
+}
