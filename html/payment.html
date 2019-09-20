@@ -19,54 +19,69 @@
 
 	<div class="container">
 		<div class="content">
-		<div class="heading-section">
-			<h1 class="main-heading">Payment</h1>
-			<h1 class="maori-heading">Utunga</h1>
-		</div>
-
-		<div class="payment">
-			<div class="payment__types">
-				<div class="payment__counter">
-					<input type="radio" name="payment" id="counter-check" value="counter">
-					<label for="counter-check" class="payment-type-text">Pay at counter</label>
-					<div class="payment__counter__info">
-						<div class="payment__counter__info--button">i</div>
-						<div class="payment__counter__info--hidden-text">Pay at counter if you are paying by cash or EFTpos or a credit card not accepted online. You can pay on your way out.</div>
-					</div>
-				</div>
-				<div class="payment__online">
-					<input type="radio" name="payment" id="online-check" value="online">
-					<label for="online-check" class="payment-type-text">Pay online</label>
-					<p class="payment__online--accepted">We accept Visa and Mastercard</p>
-					<div class="payment__online__payment">
-						<div class="payment__online__payment--name">
-							<label for="name-on-card">Name on card</label>
-							<input type="text" id="name-on-card">
-						</div>
-						<div class="payment__online__payment--number">
-							<label for="cc-number">Credit Card Number</label>
-							<input type="text" id="cc-number">
-						</div>
-						<div class="payment__online__payment--date">
-							<label for="exp-date">Expiry date</label>
-							<input type="text" id="exp-date">
-						</div>
-						<div class="payment__online__payment--cvv">
-							<label for="cvv">CVV</label>
-							<input type="text" id="cvv">
-						</div>
-					</div>
-				</div>
-			</div> <!-- payment types ENDS -->
-			<div class="payment-button">
-				<button class="success-button green-button"><a href="order_confirm.html">Confirm Order</a></button>
+			<div class="heading-section">
+				<h1 class="main-heading">Payment</h1>
+				<h1 class="maori-heading">Utunga</h1>
 			</div>
-		</div> <!-- payment ENDS -->
+
+			<div class="payment">
+				<div class="payment__types">
+					<div class="payment__counter--outer">
+					<div class="payment__counter">
+						<div class="align-input-label">
+							<input class="payment__radio" type="radio" name="payment" id="counter-check" value="counter" checked>
+							<label for="counter-check" class="payment-type-text">Pay at counter</label>
+						</div>
+						<div class="payment__counter__info">
+							<div class="payment__counter__info--button">i</div>
+							<div class="payment__counter__info--hidden-text">Pay at counter if you are paying by cash or EFTpos or a credit card not accepted online. You can pay on your way out.</div>
+						</div>
+					</div>
+					</div>
+					<div class="payment__online">
+						<div class="payment__online--visible">
+							<div class="align-input-label">
+								<input class="payment__radio" type="radio" name="payment" id="online-check" value="online">
+								<label for="online-check" class="payment-type-text">Pay online</label>
+							</div>
+							<p class="payment__online--accepted">We accept Visa and Mastercard</p>
+						</div>
+						<div class="payment__online--payment--outer">
+							<div class="payment__online--payment">
+									<label for="name-on-card">Name on card:</label>
+									<input type="text" id="name-on-card">
+
+									<label for="cc-number">Credit Card Number:</label>
+									<input type="text" id="cc-number">
+
+									<label for="exp-date">Expiry date:</label>
+									<input type="text" id="exp-date">
+
+									<label for="cvv">CVV:</label>
+									<input type="text" id="cvv">
+							</div>
+						</div>
+					</div>
+				</div> <!-- payment types ENDS -->
+
+				<div class="payment-button">
+					<button class="success-button green-button"><a href="order_confirm.html">Confirm Order</a></button>
+				</div>
+			</div> <!-- payment ENDS -->
 		</div>
 	</div> <!-- container ENDS -->
-	<script src="https://kit.fontawesome.com/6c7bb61f4b.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="../js/script.js"></script>
 
-</body>
-</html>
+	<!-- call waiter FIXED -->
+	<div class="waiter-container">
+		<h1 class="waiter-close-popup">X</h1>
+		<div class="waiter-inner">
+			<h2 class="customize-inner__heading">A waiter will be on their way soon</h2>
+			<h3 class="waiter-inner__heading--thanks">Thank you for being patient</h2>
+			</div>
+		</div> <!-- call waiter pop up ENDS -->
+		<script src="https://kit.fontawesome.com/6c7bb61f4b.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="../js/script.js"></script>
+
+	</body>
+	</html>

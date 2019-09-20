@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Your Order - The Larder</title>
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 </head>
 <body>
 	<header>
@@ -12,62 +13,72 @@
 
 	<div class="container">
 		<div class="content">
-		<div class="heading-section">
-			<h1 class="main-heading">Order Confirmation</h1>
-			<h1 class="maori-heading">Haamauraa</h1>
-		</div>
+			<div class="heading-section">
+				<h1 class="main-heading">Order Confirmation</h1>
+				<h1 class="maori-heading">Haamauraa</h1>
+			</div>
 
-		<div class="confirmed-order">
-			<div class="confirmed-order__food">
-				<div class="confirmed-order__food__item">
-					<div class="confirmed-order__food__item--name">Shrooms</div>
-					<div class="confirmed-order__food__item--price">$12</div>
-				</div>
-				<div class="confirmed-order__food__item">
-					<div class="confirmed-order__food__item--name">Across to the pig ranch</div>
-					<div class="confirmed-order__food__item--price">$17</div>
-				</div>
-				<div class="confirmed-order__food__item">
-					<div class="confirmed-order__food__item--name">Sheep from the Middle East</div>
-					<div class="confirmed-order__food__item--price">$25</div>
-				</div>
-				<div class="confirmed-order__food__item">
-					<div class="confirmed-order__food__item--name">Pineapple Juice x2</div>
-					<div class="confirmed-order__food__item--price">$8</div>
-				</div>
-			</div> <!-- confirmedOrder food ENDS -->
+			<div class="ordered-food">
+				<div class="ordered-food__food">
+					<div class="ordered-food__food__item">
+						<div class="confirmed-order__food__item--name">Shrooms</div>
+						<div class="confirmed-order__food__item--price">$12</div>
+					</div>
+					<div class="ordered-food__food__item">
+						<div class="confirmed-order__food__item--name">Across to the pig ranch</div>
+						<div class="confirmed-order__food__item--price">$17</div>
+					</div>
+					<div class="ordered-food__food__item">
+						<div class="confirmed-order__food__item--name">Sheep from the Middle East</div>
+						<div class="confirmed-order__food__item--price">$25</div>
+					</div>
+					<div class="ordered-food__food__item">
+						<div class="confirmed-order__food__item--name">Pineapple Juice x2</div>
+						<div class="confirmed-order__food__item--price">$8</div>
+					</div>
+				</div> <!-- ordered-food food ENDS -->
 
-			<div class="confirmed-order__totalPrice">
-				<div class="confirmed-order__totalPrice--text">Total Price</div>
-				<div class="confirmed-order__totalPrice--price">$62</div>
+				<div class="ordered-food__totalPrice">
+					<div class="ordered-food__totalPrice--text">Total Price</div>
+					<div class="ordered-food__totalPrice--price">$62</div>
+				</div>
+			</div>
+
+			<div class="food-due">
+				<div class="food-due__heading">Food Due:</div>
+				<div class="food-due__time" id="food-due-time"></div>
+			</div>
+
+			<div class="confirmed-order-buttons">
+				<button class="confirmed-order-button white-button"><a href="menu.html">Make Another Order</a></button>
+				<button class="confirmed-order-button call-waiter white-button">Call Waiter</button>
+			</div>
+
+			<div class="rate-experience">
+				<div class="rate-experience__heading">Rate Your Experience:</div>
+				<div class="rate-experience__stars" id="rateYo"></div>
+			</div>
+
+			<div class="feedback-form">
+				<label for="feedback">Feedback</label>
+				<textarea id="feedback" cols="1" rows="10" placeholder="COMMENT"></textarea>
+				<input type="submit" value="Submit Feedback">
 			</div>
 		</div>
-
-		<div class="food-due">
-			<div class="food-due__heading">Food Due:</div>
-			<div class="food-due__time">1:22 PM</div>
-		</div>
-
-		<div class="confirmed-order-buttons">
-			<button class="confirmed-order-button white-button"><a href="menu.html">Make Another Order</a></button>
-			<button class="confirmed-order-button call-waiter white-button">Call Waiter</button>
-		</div>
-
-		<div class="rate-experience">
-			<div class="rate-experience__heading">Rate Your Experience</div>
-			<div class="rate-experience__stars">Out of 5 Stars</div>
-		</div>
-
-		<div class="feedback-form">
-			<label for="feedback">Feedback</label>
-			<input type="text" id="feedback">
-			<input type="submit" value="Submit Feedback">
-		</div>
-</div>
 	</div> <!-- container ENDS -->
-	<script src="https://kit.fontawesome.com/6c7bb61f4b.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="../js/script.js"></script>
 
-</body>
-</html>
+	<!-- call waiter FIXED -->
+	<div class="waiter-container">
+		<h1 class="waiter-close-popup">X</h1>
+		<div class="waiter-inner">
+			<h2 class="customize-inner__heading">A waiter will be on their way soon</h2>
+			<h3 class="waiter-inner__heading--thanks">Thank you for being patient</h2>
+			</div>
+		</div> <!-- call waiter pop up ENDS -->
+		<script src="https://kit.fontawesome.com/6c7bb61f4b.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+		<script src="../js/script.js"></script>
+
+	</body>
+	</html>

@@ -1,5 +1,6 @@
 @import "variables";
 @import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 
 // all pages
 *{
@@ -78,6 +79,7 @@ body{
 	color: $primary-font-col;
 	padding-bottom: .5rem;
 	text-transform: uppercase;
+	padding: 1rem;
 }
 
 button{
@@ -236,9 +238,8 @@ header{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	background: $bg-col;
 	width: 60%;
-	box-shadow: 0 4px 8px 4px rgba(255, 255, 255, 0.2);
+	@include popup-design;
 	z-index: 100;
 }
 
@@ -249,6 +250,7 @@ header{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 }
 
 .customize-inner__heading{
@@ -292,8 +294,7 @@ header{
 	position: absolute;
 	top: 120%;
 	right: 0;
-	background: $bg-col;
-	box-shadow: 0 4px 8px 4px rgba(255, 255, 255, 0.2);
+	@include popup-design;
 	width: 400%;
 	padding: 1rem;
 	text-transform: uppercase;
@@ -380,13 +381,209 @@ header{
 	display: none;
 }
 
+// customize accordiond pop up 
+.customize-accordion-family{
+	position: relative;
+	cursor: pointer;
+}
+
+.customize-accordion-popup{
+	font-size: $small-text-size;
+	position: absolute;
+	left: 100%;
+	top: -1rem;
+	background: $bg-col;
+	max-width: 0;
+	overflow: hidden;
+	transition: max-width 0.2s ease-out;
+}
+
+.isOpen{
+	@include popup-design;
+	padding: 1rem;
+}
+
+.waiter-container{
+	@extend .customize-container;
+}
+
+.waiter-close-popup{
+	@extend .customize-close-popup;
+}
+
+.waiter-inner{
+	@extend .customize-inner;
+}
+
+// payment page 
+.payment{
+	@extend .ordered-food;
+}
+
+.payment__types{
+	@extend .ordered-food__food;
+}
+
+.payment__counter, .payment__online--visible{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+	margin: auto;
+}
+
+.align-input-label{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	label{
+		padding: .5rem;
+	}
+}
+
+.payment__counter--outer{
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid #fff;
+}
+
+.payment__counter__info{
+	position: relative;
+}
+
+.payment__counter__info--hidden-text{
+	position: absolute;
+	font-size: $small-text-size;
+	bottom: 100%;
+	left: 100%;
+	min-width: 10rem;
+	display: none;
+	text-align: justify;
+	margin: 0rem 1rem;
+	padding: .5rem;
+	@include popup-design;
+}
+
+.payment__radio{
+	width: $food-item-heading-size;
+	height: $food-item-heading-size;
+	border: none;
+	outline: none;
+}
+
+.payment__online{
+	display: flex;
+	flex-direction: column;
+}
+
+.payment__online--payment--outer{
+	display: none;
+}
+.payment__online--payment{
+	font-size: $button-font-size;
+	width: 80%;
+	margin: 2rem auto 0;
+	text-align: left;
+	display: grid;
+	grid-template-columns: 45% 1fr;
+	transition: max-height 0.2s ease-out;
+
+	& > input{
+		margin: .5rem;
+		outline: none;
+		font-size: $small-text-size;
+		transform: translateY(-5px);
+	}
+}
+
+.payment__online--accepted{
+	font-size: $small-text-size;
+}
+
+.payment__counter__info--button{
+	font-size: $button-font-size;
+	text-transform: lowercase;
+	font-family: 'Roboto Slab', serif;
+	background: $primary-font-col;
+	color: $bg-col;
+	border-radius: 50%;
+	width: 1.5rem;
+}
+
+#cvv, #exp-date{
+	width: 30%;
+}
 
 
+// order confirmation page 
+.food-due{
+	width: 100%;
+	text-align: center;
+	padding: 2rem;
+	margin: -2rem 0 2rem;
+	font-size: $food-item-heading-size;
+	text-transform: uppercase;
+}
 
+.food-due__heading, .rate-experience__heading{
+	padding: 1rem;
+}
 
+.food-due__time{
+	font-size: $main-heading-size;
+}
 
+.confirmed-order-buttons{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 4rem;
+}
 
+.rate-experience{
+	@extend .food-due;
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
+.feedback-form{
+	@extend .rate-experience;
+	label{
+		padding: 1rem;
+	}
+	textarea{
+		width: 50%;
+		outline: none;
+		font-size: $small-text-size;
+		padding: .5rem;
+	}
+	input[type="submit"]{
+		@extend .white-button;
+		margin-top: 2rem;
+		outline: none;
+		cursor: pointer;
+	}
+}
+
+@media (min-width: 1200px) {
+	.content{
+		margin-top: 2rem;
+	}
+	.maori-heading{
+		padding: 1rem;
+	}
+	.section__grid-items{
+		margin-bottom: 6rem;
+	}
+	.food-due{
+		margin: 0 0 4rem;
+	}
+	.rate-experience{
+		margin-bottom: 4rem;
+	}
+}
 
 
 
