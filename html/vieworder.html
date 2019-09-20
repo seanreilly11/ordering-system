@@ -61,7 +61,10 @@
 								</select>
 							</div>
 							<div class="ordered-food__food__item--edit"><i class="fas fa-edit"></i></div>
-							<div class="ordered-food__food__item--customized">Customized<i class="fas fa-arrow-circle-down"></i></div>
+							<div class="customize-accordion-family">
+								<div class="ordered-food__food__item--customized" id="customize-accordion">Customized<i class="fas fa-arrow-circle-down"></i></div>
+								<div class="customize-accordion-popup">No spinach please. I really can't eat it honestly</div>
+							</div>
 						</div> <!-- details ENDS -->
 						<div class="ordered-food__food__item--price">$17</div>
 					</div> <!-- orderedFood__food__item ENDS -->
@@ -138,7 +141,17 @@
 			</div>
 			<button class="confirm-custom-btn green-button">CONFIRM</button>
 		</div>
-	</div>
+	</div> <!-- customize section pop up ENDS -->
+
+	<!-- call waiter FIXED -->
+	<div class="waiter-container">
+		<h1 class="waiter-close-popup">X</h1>
+		<div class="waiter-inner">
+			<h2 class="customize-inner__heading">A waiter will be on their way soon</h2>
+			<h3 class="waiter-inner__heading--thanks">Thank you for being patient</h2>
+		</div>
+	</div> <!-- call waiter pop up ENDS -->
+	
 	<script src="https://kit.fontawesome.com/6c7bb61f4b.js"></script><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="../js/script.js"></script>
 </body>
