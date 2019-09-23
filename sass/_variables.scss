@@ -16,11 +16,13 @@ $nav-font-size: 20px;
 $small-text-size: 14px;
 
 // mixins
+// makes anchor tet white without decoration
 @mixin button-col-dec {
   	color: $secondary-font-col;
 	text-decoration: none;
 }
 
+// gives all pop ups background colour and box shadow
 @mixin popup-design {
   	background: $bg-col;
 	box-shadow: 0 4px 8px 4px rgba(255, 255, 255, 0.2);

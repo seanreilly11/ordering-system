@@ -47,8 +47,8 @@ body{
 }
 
 .green-button{
-	@extend .white-button;
-	background: $green-button;
+	@extend .white-button; // same style as white button
+	background: $green-button; // different colour
 }
 
 .header-logo{
@@ -218,6 +218,7 @@ header{
 
 .section__grid-items__header--price{
 	font-size: $food-item-heading-size;
+	margin-left: .5rem;
 }
 
 .section__grid-items__body{
@@ -377,6 +378,7 @@ header{
 	align-items: center;
 }
 
+// hides food descriptions
 .food-des{
 	display: none;
 }
@@ -561,13 +563,13 @@ header{
 	}
 	input[type="submit"]{
 		@extend .white-button;
+		@extend button;
 		margin-top: 2rem;
-		outline: none;
-		cursor: pointer;
 	}
 }
 
 @media (min-width: 1200px) {
+	// makes more spacing on bigger screen
 	.content{
 		margin-top: 2rem;
 	}
