@@ -6,9 +6,10 @@ var itemNameAdded = document.getElementById("added-food-item");
 
 var timeDueOut = document.getElementById("food-due-time");
 
-var orderedFood = ["Shrooms" , "Across to the pig ranch", "Sheep from the Middle East"];
+var orderedFood = ["Shrooms" , "Across to the pig ranch", "Sheep from the Middle East"]; // array to choose right food description
 
 $(document).ready(function(){
+	// function puts correct food item information in customize pop up
 	$(".customize-button").click(function(e) {
 		let itemName = e.target.parentNode.parentNode.children[0].children[0].children[0].innerHTML;
 		let itemPrice = e.target.parentNode.parentNode.children[0].children[0].children[2].innerHTML;
@@ -16,34 +17,33 @@ $(document).ready(function(){
 		listCustomItem(itemName, itemPrice,itemBody);
 	});
 
+	// function puts correct food item information in customize pop up on view order page and finds the description
 	$(".fa-edit").click(function(e) {
 		let itemName = e.target.parentNode.parentNode.children[0].innerHTML;
 		let itemPrice = e.target.parentNode.parentNode.nextElementSibling.innerHTML;
-		var arrayId = orderedFood.indexOf(itemName);
-		let itemBody = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.nextElementSibling.children[arrayId].innerHTML;
+		var arrayId = orderedFood.indexOf(itemName); // finds what index in the array is the chosen food item
+		let itemBody = e.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.nextElementSibling.children[arrayId].innerHTML; // finds the food description of the correct food using the index in the array to find the right child
 		listCustomItem(itemName, itemPrice,itemBody);
 	});
 	
 	// open and close customize section
-	$(".customize-button").click(function() {
+	$(".customize-button").click(function() { // open customize pop up on menu page
 		$(".customize-container").show();
 	});	
-	$(".customize-close-popup").click(function() {
-		$(".customize-container").hide();
-	});
 
-	$(".fa-edit").click(function() {
+	$(".fa-edit").click(function() { // open customize pop up on view order page
 		$(".customize-container").show();
 	});	
-	$(".customize-close-popup").click(function() {
+
+	$(".customize-close-popup").click(function() { // close customize pop up by pressing the x
 		$(".customize-container").hide();
 	});
 
 	// confirm customization
-	$(".confirm-custom-btn").click(function() {
+	$(".confirm-custom-btn").click(function() { // closes customize pop up on confirm click
 		$(".customize-container").hide();
 	});
-	$(".confirm-custom-btn").click(function(e) {
+	$(".confirm-custom-btn").click(function(e) { // and adds item to cart and shows pop up
 		let itemNameB = e.target.parentNode.children[1].children[0].children[0].innerText;
 		listAddedItem(itemNameB);
 	});
@@ -58,12 +58,12 @@ $(document).ready(function(){
 	$(".call-waiter").click(function() {
 		$(".waiter-container").show();
 	});	
-	$(".waiter-close-popup").click(function() {
+	$(".waiter-close-popup").click(function() { // and close it 
 		$(".waiter-container").hide();
 	});
 
 	// show customized comment section
-	$("#customize-accordion").click(function() {
+	$("#customize-accordion").click(function() { // shows customized information. Slides out from button changing its width
 		var panel = this.nextElementSibling;
 		if (panel.style.maxWidth){
 			panel.style.padding = "0";
@@ -76,13 +76,18 @@ $(document).ready(function(){
 		} 
 	});	
 
-	// show online payment section
+	// show online payment section 
 	$("#online-check").click(function() {
-		if($(this).is(":checked")){
+		var isChecked = $('#online-check').prop('checked');
+		if(isChecked){
 			$(".payment__online--payment--outer").slideDown();
 		} 
-		else if($(this).is(":not(:checked)")){
-			alert("Uncheck");
+	});	
+
+	// hide online payment section  
+	$("#counter-check").click(function() {
+		var isChecked = $('#online-check').prop('checked');
+		if(!isChecked){
 			$(".payment__online--payment--outer").slideUp();
 		} 
 		
@@ -96,8 +101,9 @@ $(document).ready(function(){
 	// show date food is due
 	var d = new Date(); 
 	var v = new Date(); 
-	v.setMinutes(d.getMinutes()+20); 
+	v.setMinutes(d.getMinutes()+20); // current date plus 20 minutes
 
+	// prints in 12 hour time
 	if(v.getHours() > 12){
 		if(v.getMinutes()<10){
 			timeDueOut.innerHTML = v.getHours()-12+" : 0"+v.getMinutes()+" PM";
@@ -107,7 +113,12 @@ $(document).ready(function(){
 		}
 	}
 	else{
-		timeDueOut.innerHTML = v.getHours()+" : "+v.getMinutes()+" AM";
+		if(v.getMinutes()<10){
+			timeDueOut.innerHTML = v.getHours()-12+" : 0"+v.getMinutes()+" AM";
+		}
+		else{
+			timeDueOut.innerHTML = v.getHours()+" : "+v.getMinutes()+" AM";
+		}
 	}
 });
 
@@ -125,7 +136,6 @@ function listAddedItem(itemNameAdd) {
 	$(".added-to-cart").fadeIn();
 	$(".added-to-cart").delay(5000).fadeOut();
 }
-
 
 // rateyo section
  $("#rateYo").rateYo({
